@@ -5,6 +5,5 @@
       <p>2018 유기견보호센터 &copy All Rights Reserved.</p>
     </footer>
   </div>
-<script src="js/imgslide.js"></script>
 </body>
 </html>

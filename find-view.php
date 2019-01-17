@@ -1,24 +1,20 @@
 <?php include("header.php"); ?>
-
 <?php
+  $id = 0;
 
-$id = 0;
+  if ( isset($_GET['id']) ) {
+    $id = $_GET['id'];
+  }
 
-if ( isset($_GET['id']) ) {
-  $id = $_GET['id'];
-}
+  $sql = "SELECT * FROM find WHERE id={$id}";
+  $rs = $db->query($sql);
+  $row = $rs->fetch();
 
-$sql = "SELECT * FROM find WHERE id={$id}";
-$rs = $db->query($sql);
-$row = $rs->fetch();
-
-$filemain = $row['filemain'];
-$filesub = $row['filesub'];
-$srcmain = "./uploads/find/{$filemain}";
-$srcsub = "./uploads/find/{$filesub}";
-
+  $filemain = $row['filemain'];
+  $filesub = $row['filesub'];
+  $srcmain = "./uploads/find/{$filemain}";
+  $srcsub = "./uploads/find/{$filesub}";
 ?>
-
 <section class="view">
   <h2 class="animal-name"><?php echo $row['farea'] ?> <?php echo $row['kinds'] ?></h2>
   <article>
@@ -56,9 +52,9 @@ $srcsub = "./uploads/find/{$filesub}";
   <div class="comment">
     <div class="msg-icon">
       <i class="far fa-heart"></i>
-      <span>4</span>
+      <span>0</span>
       <i class="far fa-comment"></i>
-      <span>2</span>
+      <span>0</span>
     </div>
     <form action="find-comment-ok.php" method="post">
       <div class="form-group">
@@ -68,7 +64,7 @@ $srcsub = "./uploads/find/{$filesub}";
       <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
     <?php 
-      $dsql = "SELECT * FROM findcmt WHERE id={$id}";
+      $dsql = "SELECT * FROM findcmt WHERE no={$id}";
       $rs = $db->query($dsql);
       $rows = $rs->fetchAll();
       foreach($rows as $row):
@@ -81,5 +77,4 @@ $srcsub = "./uploads/find/{$filesub}";
     <?php endforeach; ?>
   </div>
 </section>
-
 <?php include("footer.php"); ?>

@@ -21,5 +21,4 @@
   if ($loginid && $loginname) {
     $login = true;
   }
-
 ?>

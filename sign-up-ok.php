@@ -26,9 +26,7 @@
     $sql .= ", useremail='{$useremail}'";
 
     $db->query($sql);
-  
   }
 
   header("Location: ./");
-
 ?>

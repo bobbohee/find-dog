@@ -1,22 +1,18 @@
 <?php include("header.php"); ?>
-
 <?php
+  $id = 0;
 
-$id = 0;
+  if ( isset($_GET['id']) ) {
+    $id = $_GET['id'];
+  }
 
-if ( isset($_GET['id']) ) {
-  $id = $_GET['id'];
-}
+  $sql = "SELECT * FROM protect WHERE id={$id}";
+  $rs = $db->query($sql);
+  $row = $rs->fetch();
 
-$sql = "SELECT * FROM protect WHERE id={$id}";
-$rs = $db->query($sql);
-$row = $rs->fetch();
-
-$file = $row['file'];
-$src = "./uploads/protect/{$file}";
-
+  $file = $row['file'];
+  $src = "./uploads/protect/{$file}";
 ?>
-
 <section class="view">
   <h2 class="animal-name"><?php echo $row['darea'] ?> <?php echo $row['kinds'] ?></h2>
   <article>
@@ -51,9 +47,9 @@ $src = "./uploads/protect/{$file}";
   <div class="comment">
     <div class="msg-icon">
       <i class="far fa-heart"></i>
-      <span>4</span>
+      <span>0</span>
       <i class="far fa-comment"></i>
-      <span>2</span>
+      <span>0</span>
     </div>
     <form action="protect-comment-ok.php" method="post">
       <div class="form-group">
@@ -76,5 +72,4 @@ $src = "./uploads/protect/{$file}";
     <?php endforeach; ?>
   </div>
 </section>
-
 <?php include("footer.php"); ?>

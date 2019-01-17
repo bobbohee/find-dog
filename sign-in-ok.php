@@ -1,5 +1,4 @@
 <?php include("config.php");
-
   $userid = "";
   $userpw = "";
 
@@ -11,7 +10,6 @@
   }
 
   if ($userid && $userpw) {
-
     $sql = "SELECT * FROM user WHERE userid='{$userid}' AND userpw='{$userpw}'";
     if ($rs = $db->query($sql)) {
       if ($user = $rs->fetch()) {
@@ -21,6 +19,5 @@
     }
   }
   
-  header("Location: ./");
-
+  header('location: ./');
 ?>

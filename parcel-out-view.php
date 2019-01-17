@@ -1,7 +1,5 @@
 <?php include("header.php"); ?>
-
 <?php
-  
   $id = 0;
 
   if ( isset($_GET['id']) ) {
@@ -19,9 +17,7 @@
   $srcone = "./uploads/parcel/{$fileone}"; 
   $srctwo = "./uploads/parcel/{$filetwo}"; 
   $srcthree = "./uploads/parcel/{$filethree}"; 
-
 ?>
-
 <section class="view">
   <h2 class="animal-name"><?php echo $row['kinds'] ?> <?php echo $row['name'] ?></h2>
   <article>
@@ -74,9 +70,9 @@
   <div class="comment">
     <div class="msg-icon">
       <i class="far fa-heart"></i>
-      <span>4</span>
+      <span>0</span>
       <i class="far fa-comment"></i>
-      <span>2</span>
+      <span>0</span>
     </div>
     <form action="parcel-comment-ok.php" method="post">
       <div class="form-group">
@@ -99,5 +95,4 @@
       <?php endforeach; ?>
   </div>
 </section>
-
 <?php include("footer.php"); ?>
