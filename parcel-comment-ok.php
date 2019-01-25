@@ -1,9 +1,9 @@
 <?php include("config.php");
-  if( !$login):
+  if(!$login):
 ?>
   <script>
     alert("로그인을 해야 댓글 달기가 가능합니다");
-    history.back(); // 바로 이전 페이지로 돌아가기
+    history.back();
   </script>
 <?php
   exit;
@@ -16,7 +16,7 @@
     $id = $_POST['id'];
   }
   if( isset($_POST['content']) ) {
-    $content = $_POST['content'];
+    $content = htmlentities($_POST['content']);
   }
 
   if( $id && $content ) {
@@ -29,5 +29,6 @@
     $db->query($sql);
   }
 
-  header("Location: parcel-out-view.php?id={$id}");
+  $prev = $_SERVER['HTTP_REFERER'];  
+  header('location:' . $prev);
 ?>

@@ -6,22 +6,22 @@
   $useremail = "";
 
   if (isset($_POST['userid'])) {
-    $userid = $_POST['userid'];
+    $userid = htmlentities($_POST['userid']);
   }
   if (isset($_POST['userpw'])) {
-    $userpw = $_POST['userpw'];
+    $userpw = htmlentities($_POST['userpw']);
   }
   if (isset($_POST['username'])) {
-    $username = $_POST['username'];
+    $username = htmlentities($_POST['username']);
   }
   if (isset($_POST['useremail'])) {
-    $useremail = $_POST['useremail'];
+    $useremail = htmlentities($_POST['useremail']);
   }
 
   if ($userid && $userpw && $username && $useremail) {
     $sql = "INSERT INTO user SET";
     $sql .= " userid='{$userid}'";
-    $sql .= ", userpw='{$userpw}'";
+    $sql .= ", userpw=password('{$userpw}')";
     $sql .= ", username='{$username}'";
     $sql .= ", useremail='{$useremail}'";
 
