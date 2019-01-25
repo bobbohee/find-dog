@@ -4,7 +4,7 @@
 
   if ( isset($_GET['id']) ) {
     $id = $_GET['id'];
-  }  
+  }
 
   $sql = "SELECT * FROM parcel WHERE id={$id}";
   $rs = $db->query($sql);
@@ -48,7 +48,7 @@
       </tr>      
     </table>
     <div class="view-div">
-      <img src="<?php echo $srcone ?>" alt="강아지 사진" class="view-img" width="790">
+      <img src="<?php echo $srcone ?>" alt="picture" class="view-img" width="790">
     </div>
     <p class="phrase">
       파양동물 입양 시 소정의 책임비가 발생하니 참고 부탁드립니다<br>
@@ -56,7 +56,7 @@
       아이들에 평생을 결정하는 선택, 신중히 생각해 보신 후에 연락해주세요
     </p>
     <div class="view-div">
-      <img src="<?php echo $srctwo ?>" alt="강아지 사진" class="view-img" width="790">
+      <img src="<?php echo $srctwo ?>" alt="picture" class="view-img" width="790">
     </div>
     <p class="phrase">
       강아지풀에서 보호관리 중인 보호동물 아이들은<br>
@@ -64,7 +64,7 @@
       방문 하시면 더 많은 아이들을 만나 보실 수 있습니다
     </p>
     <div class="view-div">
-      <img src="<?php echo $srcthree ?>" alt="강아지 사진" class="view-img" width="790">
+      <img src="<?php echo $srcthree ?>" alt="picture" class="view-img" width="790">
     </div>
   </article>
   <div class="comment">

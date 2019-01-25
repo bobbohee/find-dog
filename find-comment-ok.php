@@ -1,5 +1,5 @@
 <?php include("config.php");
-  if( !$login):
+  if(!$login):
 ?>
   <script>
     alert("로그인을 해야 댓글 달기가 가능합니다");

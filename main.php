@@ -1,7 +1,7 @@
     <div class="imgslide">
-      <img src="image/header/1.jpg" alt="이미지슬라이드1" width="940px" height="600px">
-      <img src="image/header/2.jpg" alt="이미지슬라이드2" width="940px" height="600px">
-      <img src="image/header/3.jpg" alt="이미지슬라이드3" width="940px" height="600px">
+      <img src="image/header/1.jpg" alt="slideimg" width="940" height="600">
+      <img src="image/header/2.jpg" alt="slideimg" width="940" height="600">
+      <img src="image/header/3.jpg" alt="slideimg" width="940" height="600">
     </div>
     <section class="section-th">
       <p class="phrase">
