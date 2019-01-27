@@ -20,7 +20,7 @@
   }
 
   if( $id && $content ) {
-    $sql = "INSERT INTO protectcmt SET";
+    $sql = "INSERT INTO fdprotectcmt SET";
     $sql.= " id={$id}";
     $sql.= ", writer='{$loginname}'";
     $sql.= ", content='{$content}'";

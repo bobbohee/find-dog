@@ -9,7 +9,7 @@
         많은 사랑과 관심 부탁드립니다
       </p>
       <?php
-        $sql = "SELECT * FROM parcel";
+        $sql = "SELECT * FROM fdparcel";
         $rs = $db->query($sql);
         $rows = $rs->fetchAll();
 
@@ -23,7 +23,7 @@
           $srctwo = "./uploads/parcel/{$filetwo}"; 
           $srcthree = "./uploads/parcel/{$filethree}"; 
 
-          $sql_cnt = "SELECT count(*) FROM parcelcmt WHERE id={$id}";
+          $sql_cnt = "SELECT count(*) FROM fdparcelcmt WHERE id={$id}";
           $rs_cnt = $db->query($sql_cnt);
           $row_cnt = $rs_cnt->fetch();    
       ?>

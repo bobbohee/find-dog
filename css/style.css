@@ -63,6 +63,7 @@ nav > ul > li > a {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+  transition: all 0.5s;
 }
 nav > ul > li > .login {
   width: 170px;
@@ -75,7 +76,6 @@ nav > ul > li > .login > p {
 }
 nav > ul > li a:hover, a:active {
   color: #28a745;
-  transition: 0.5s;
 }
 .imgslide {
   width: 940px;

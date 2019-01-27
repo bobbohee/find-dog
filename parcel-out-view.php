@@ -6,7 +6,7 @@
     $id = $_GET['id'];
   }
 
-  $sql = "SELECT * FROM parcel WHERE id={$id}";
+  $sql = "SELECT * FROM fdparcel WHERE id={$id}";
   $rs = $db->query($sql);
   $row = $rs->fetch();
 
@@ -82,7 +82,7 @@
       <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
     <?php 
-      $dsql = "SELECT * FROM parcelcmt WHERE id={$id}";
+      $dsql = "SELECT * FROM fdparcelcmt WHERE id={$id}";
       $rs = $db->query($dsql);
       $rows = $rs->fetchAll();
       foreach($rows as $row):

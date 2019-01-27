@@ -20,7 +20,7 @@
   }
 
   if( $id && $content ) {
-    $sql = "INSERT INTO parcelcmt SET";
+    $sql = "INSERT INTO fdparcelcmt SET";
     $sql.= " id={$id}";
     $sql.= ", writer='{$loginname}'";
     $sql.= ", content='{$content}'";

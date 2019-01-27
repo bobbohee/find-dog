@@ -19,7 +19,7 @@
   }
 
   if ($userid && $userpw && $username && $useremail) {
-    $sql = "INSERT INTO user SET";
+    $sql = "INSERT INTO fduser SET";
     $sql .= " userid='{$userid}'";
     $sql .= ", userpw=password('{$userpw}')";
     $sql .= ", username='{$username}'";

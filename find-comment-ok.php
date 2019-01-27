@@ -3,7 +3,7 @@
 ?>
   <script>
     alert("로그인을 해야 댓글 달기가 가능합니다");
-    history.back(); // 바로 이전 페이지로 돌아가기
+    history.back();
   </script>
 <?php
   exit;
@@ -20,7 +20,7 @@
   }
 
   if( $id && $content ) {
-    $sql = "INSERT INTO findcmt SET";
+    $sql = "INSERT INTO fdfindcmt SET";
     $sql.= " no={$id}";
     $sql.= ", writer='{$loginname}'";
     $sql.= ", content='{$content}'";

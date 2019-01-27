@@ -6,7 +6,7 @@
     $id = $_GET['id'];
   }
 
-  $sql = "SELECT * FROM find WHERE id={$id}";
+  $sql = "SELECT * FROM fdfind WHERE id={$id}";
   $rs = $db->query($sql);
   $row = $rs->fetch();
 
@@ -64,7 +64,7 @@
       <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
     </form>
     <?php 
-      $dsql = "SELECT * FROM findcmt WHERE no={$id}";
+      $dsql = "SELECT * FROM fdfindcmt WHERE no={$id}";
       $rs = $db->query($dsql);
       $rows = $rs->fetchAll();
       foreach($rows as $row):

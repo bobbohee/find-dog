@@ -53,7 +53,7 @@
   }
 
   if ($kinds && $cftion && $gender && $farea && $ftime && $pnumber1 && $pnumber2 && $pnumber3 && $sgity) {
-    $sql = "INSERT INTO find SET ";
+    $sql = "INSERT INTO fdfind SET ";
     $sql .= "kinds=:kinds";
     $sql .= ", cftion=:cftion";
     $sql .= ", gender=:gender";
@@ -65,7 +65,7 @@
     $sql .= ", sgity=:sgity";
     $sql .= ", filemain=:filemain";
     $sql .= ", filesub=:filesub";
-    $sql .= ", date=:now()";
+    $sql .= ", date=now()";
     $rs = $db->prepare($sql);
 
     $rs->bindParam(":kinds", $kinds);

@@ -8,7 +8,7 @@
     </a>
   </div>
   <?php
-    $sql = "SELECT * FROM protect";
+    $sql = "SELECT * FROM fdprotect";
     $rs = $db->query($sql);
     $rows = $rs->fetchAll();
     foreach($rows as $row):
@@ -16,7 +16,7 @@
       $file = $row['file'];
       $src = "./uploads/protect/{$file}"; 
       
-      $sql_cnt = "SELECT count(*) FROM protectcmt WHERE id={$id}";
+      $sql_cnt = "SELECT count(*) FROM fdprotectcmt WHERE id={$id}";
       $rs_cnt = $db->query($sql_cnt);
       $row_cnt = $rs_cnt->fetch();
   ?>

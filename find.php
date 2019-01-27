@@ -8,7 +8,7 @@
     </a>
   </div>
   <?php
-    $sql = "SELECT * FROM find";
+    $sql = "SELECT * FROM fdfind";
     $rs = $db->query($sql);
     $rows = $rs->fetchAll();
     foreach($rows as $row):
@@ -16,7 +16,7 @@
       $filemain = $row['filemain'];
       $src = "./uploads/find/{$filemain}";
       
-      $sql_cnt = "SELECT count(*) FROM findcmt WHERE no={$id}";
+      $sql_cnt = "SELECT count(*) FROM fdfindcmt WHERE no={$id}";
       $rs_cnt = $db->query($sql_cnt);
       $row_cnt = $rs_cnt->fetch();
   ?>

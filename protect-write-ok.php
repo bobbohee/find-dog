@@ -51,7 +51,7 @@
   }
 
   if ($kinds && $cftion && $gender && $darea && $dtime && $pnumber1 && $pnumber2 && $pnumber3 && $sgity) {
-    $sql = "INSERT INTO protect SET ";
+    $sql = "INSERT INTO fdprotect SET ";
     $sql .= "kinds=:kinds";
     $sql .= ", cftion=:cftion";
     $sql .= ", gender=:gender";

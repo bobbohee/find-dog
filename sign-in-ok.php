@@ -10,7 +10,7 @@
   }
 
   if ($userid && $userpw) {
-    $sql = "SELECT * FROM user WHERE userid='{$userid}' AND userpw=password('{$userpw}')";
+    $sql = "SELECT * FROM fduser WHERE userid='{$userid}' AND userpw=password('{$userpw}')";
     if ($rs = $db->query($sql)) {
       if ($user = $rs->fetch()) {
         $_SESSION['loginid'] = $user['userid'];

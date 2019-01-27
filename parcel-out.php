@@ -2,7 +2,7 @@
 <section class="section-th">
   <p class="phrase">많은 관심과 사랑으로 보살펴주세요</p>
   <?php
-    $sql = "SELECT * FROM parcel";
+    $sql = "SELECT * FROM fdparcel";
     $rs = $db->query($sql);
     $rows = $rs->fetchAll();
 
@@ -16,7 +16,7 @@
       $srctwo = "./uploads/parcel/{$filetwo}"; 
       $srcthree = "./uploads/parcel/{$filethree}"; 
 
-      $sql_cnt = "SELECT count(*) FROM parcelcmt WHERE id={$id}";
+      $sql_cnt = "SELECT count(*) FROM fdparcelcmt WHERE id={$id}";
       $rs_cnt = $db->query($sql_cnt);
       $row_cnt = $rs_cnt->fetch();    
   ?>
